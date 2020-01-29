@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <div class="container">
+            <p class="mg-2 mg-1">How much is your bill?</p>
+            <input id="billInput" type="number" placeholder="Bill Amount" min="10" onfocus="this.value=''">
+            <span><p class="required">$</p></span>
+
+            <p class="mg-1">How is your service?</p>
+            <select name="service" id="service">
+                <option value="0" disabled selected>Choose an option</option>
+                <option value="0.2"> 20% Outstanding</option>
+                <option value="0.15">15% Excellent</option>
+                <option value="0.1">10% Ok</option>
+                <option value="0.05">5% Bad</option>
+            </select>
+            <span><p class="required"></p></span>
+
+            <p class="mg-1">How many persons are sharing the bill?</p>
+            <input id="peopleInput" type="number" placeholder="# of people" min="0" onfocus="this.value=''">
+            <span><p class="required">people</p></span>
+
+            <button id="calculate" onclick="CalculateTip()">Calculate</button>
+            
+            <div id="display">
+                   <p>The total tip amount <span id="total-tip"></span> $</p>
+                   <p id="individual"></p>
+            </div>   
+            
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+    
+</body>
+</html>
